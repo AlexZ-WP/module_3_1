@@ -1,31 +1,62 @@
 calls = 0
+def count_calls():
+    global calls
+    calls += 1
 
-# def string_info(string):
-#
-#     n = ()
-#     n[0:] = len(string)
-#     n[1:] = string.upper()
-#     n[2:] = string.lower()
-#
-#     n = string
-#
-#     return
-#
-# print(string_info('Capybara'))
+def string_info(string):
+    count_calls()
+    return len(string), string.upper(), string.lower()
+
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+
+
 
 def is_contains(string,list_to_search):
-    # string = string.lower()
-    # list_to_search = list_to_search.lower()
+    count_calls()
+    string = string.lower()
+    for i in list_to_search:
 
-    for i in string:
-        if i == list_to_search:
+        if (string.lower() == i) or (string == i.lower()):
             print('True')
-        else:
-            print('False')
-            # string.lower()
-            # list_to_search.lower()
+            break
+    else:
+        print('False')
     return
-is_contains('Urban', ['ban', 'BaNaN', 'Urban'])
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
+print(is_contains('cycle', ['recycling', 'cyclic']))
+print(calls)
+
+
+
+
+
+
+    
+
+
+
+
+
+
+    
+    
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
