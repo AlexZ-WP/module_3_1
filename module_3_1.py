@@ -16,15 +16,15 @@ def is_contains(string,list_to_search):
     count_calls()
     string = string.lower()
     for i in list_to_search:
-
-        if (string.lower() == i) or (string == i.lower()):
-            print('True')
+        if string == i.lower():
+        #if (string.lower() == i) or (string == i.lower()):
+            print(True)
             break
     else:
-        print('False')
+        print(False)
     return
-print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
-print(is_contains('cycle', ['recycling', 'cyclic']))
+is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])
+is_contains('cycle', ['recycling', 'cyclic'])
 print(calls)
 
 
